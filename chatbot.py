@@ -12,7 +12,7 @@ class AICalculator:
     self.client = genai.Client(api_key=self.api_key)
   
   def calculate(self, num1:int, num2:int):
-    question_content = f"Calculate the result of {num1} x {num2}. Output ONLY the equation anf the final numerical answer, using no words, no explanations."
+    question_content = f"Calculate the result of {num1} x {num2}. Output ONLY the equation and the final numerical answer, using no words, no explanations."
 
     response = self.client.models.generate_content(
         model=self.model, contents=question_content
